@@ -1,0 +1,8 @@
+DaoType=S2JDBC
+DefaultResourcePath=/omikuji-sastruts/src/main/resources
+DefaultRootPackage=org.seasar.sastruts.omikuji
+DefaultSrcPath=/omikuji-sastruts/src/main/java
+ServletPath=omikuji-sastruts
+ViewType=SA-Struts
+WebContentsRoot=src/main/webapp
+eclipse.preferences.version=1
