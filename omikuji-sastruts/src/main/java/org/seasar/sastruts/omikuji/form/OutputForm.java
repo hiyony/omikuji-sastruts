@@ -7,6 +7,10 @@ import org.seasar.framework.container.annotation.tiger.InstanceType;
 
 @Component(instance=InstanceType.SESSION)
 public class OutputForm implements Serializable{
+	
+	@SuppressWarnings("unused")
+	private static final long serialVerisionUID = 1L;
+	
 	protected static String unsei;
 	protected static String negaigoto;
 	protected static String akinai;

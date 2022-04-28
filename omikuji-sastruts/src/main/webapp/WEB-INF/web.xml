@@ -34,15 +34,20 @@ version="2.4">
             <param-value>UTF-8</param-value>
         </init-param>
     </filter>
+    
+    <filter>
+    	<filter-name>portletRequestFilter</filter-name>
+    	<filter-class>org.seasar.struts.portlet.filter.PortletRequestFilter</filter-class>
+    </filter>
 
     <filter>
         <filter-name>hotdeployfilter</filter-name>
-        <filter-class>org.seasar.framework.container.hotdeploy.HotdeployFilter</filter-class>
+        <filter-class>org.seasar.struts.portlet.filter.HotdeployFilter</filter-class>
     </filter>
 
     <filter>
         <filter-name>s2filter</filter-name>
-        <filter-class>org.seasar.framework.container.filter.S2ContainerFilter</filter-class>
+        <filter-class>org.seasar.struts.portlet.filter.S2ContainerFilter</filter-class>
     </filter>
 
     <filter>
@@ -52,6 +57,11 @@ version="2.4">
             <param-name>jspDirectAccess</param-name>
             <param-value>false</param-value>
         </init-param>
+    </filter>
+    
+    <filter>
+    	<filter-name>portletRoutingfilter</filter-name>
+    	<filter-class>org.seasar.struts.portlet.filter.PortletRoutingFilter</filter-class>
     </filter>
     
     <filter>
@@ -72,6 +82,12 @@ version="2.4">
         <dispatcher>INCLUDE</dispatcher>
         <dispatcher>ERROR</dispatcher>
     </filter-mapping>
+    
+    <filter-mapping>
+    	<filter-name>portletRequestFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+    	<dispatcher>INCLUDE</dispatcher>
+    </filter-mapping>
 
     <filter-mapping>
         <filter-name>s2filter</filter-name>
@@ -89,6 +105,12 @@ version="2.4">
     </filter-mapping>
     
     <filter-mapping>
+    	<filter-name>portletRoutingfilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+    	<dispatcher>INCLUDE</dispatcher>
+    </filter-mapping>
+    
+    <filter-mapping>
         <filter-name>requestDumpFilter</filter-name>
         <url-pattern>*.do</url-pattern>
         <dispatcher>REQUEST</dispatcher>
@@ -99,7 +121,7 @@ version="2.4">
     
     <servlet>
         <servlet-name>action</servlet-name>
-        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+        <servlet-class>org.seasar.struts.portlet.servlet.ActionServlet</servlet-class>
         <init-param>
             <param-name>config</param-name>
             <param-value>/WEB-INF/struts-config.xml</param-value>

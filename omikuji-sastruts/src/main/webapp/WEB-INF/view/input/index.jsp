@@ -21,15 +21,11 @@
 <body>
 	<h1>Omikuji Web Service</h1>
 	
-	<s:form>
+	<s:form method = "POST" action = "/input/">
 		<span>お誕生日を入力してください！</span>
 		<html:text property = "birthday" /> (yyyyMMddの形式)
 		<html:errors property = "birthday" />
-		<input type = "submit"
-			   name = "btn"
-			   value = "確認"
-			   formaction = "<%= request.getContextPath() %> /InputAction"
-			   formmethod = "POST" />
+		<s:submit property = "output" value = "確認" />
 		<div>
 			<html:errors />
 		</div>

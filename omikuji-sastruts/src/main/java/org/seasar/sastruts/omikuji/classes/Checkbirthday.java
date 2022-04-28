@@ -1,4 +1,4 @@
-package org.seasar.sastruts.omikuji.condition;
+package org.seasar.sastruts.omikuji.classes;
 
 import java.text.SimpleDateFormat;
 

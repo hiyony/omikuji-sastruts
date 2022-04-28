@@ -1,22 +1,31 @@
 package org.seasar.sastruts.omikuji.form;
 
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionMessage;
-import org.seasar.sastruts.omikuji.condition.Checkbirthday;
+import java.io.Serializable;
 
-public class InputForm {
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.action.ActionMessages;
+import org.seasar.framework.container.annotation.tiger.Component;
+import org.seasar.framework.container.annotation.tiger.InstanceType;
+import org.seasar.sastruts.omikuji.classes.Checkbirthday;
+import org.seasar.struts.annotation.Required;
+
+@Component(instance = InstanceType.SESSION)
+public class InputForm implements Serializable{
+	
+	@SuppressWarnings("unused")
+	private static final long serialVerisionUID = 1L;
+	
+	@Required
 	public String birthday;
 	
-	public String getBirthday() {
-		return birthday;
-	}
+	@Resource
+	protected HttpServletRequest request;
 
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
-	}
-
-	public ActionErrors validate() {
-		ActionErrors errors = new ActionErrors();
+	public ActionMessages validate() {
+		ActionMessages errors = new ActionMessages();
 		Boolean checkbday = Checkbirthday.checkbday(birthday);
 		
 		if(checkbday.equals(false)) {

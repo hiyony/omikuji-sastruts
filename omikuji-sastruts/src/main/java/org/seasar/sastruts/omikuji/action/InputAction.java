@@ -10,15 +10,15 @@ public class InputAction {
 	@Required
 	@ActionForm
 	protected InputForm inputform;
+
+	@Execute(validator = true, validate = "validate", input = "index.jsp")
+	public String output() {
+		return "output.jsp";
+	}
 	
 	@Execute(validator = false)
 	public String index() {
 		return "index.jsp";
 	}
 	
-	@Execute(validator = true, input = "index.jsp")
-	public String output() {
-		return "output.jsp";
-	}
-
 }

@@ -38,7 +38,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-entity>
     <javac
       srcdir="${javafiledestdir}"
@@ -58,7 +58,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-names>
     <gen-sqlfileconstants
       classpathDir="${classpathdir}"
@@ -71,7 +71,7 @@
         <sqlfileset dir="${classpathdir}">
           <include name="${sqlfilepattern}" />
         </sqlfileset>
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-sqlfileconstants>
     <gen-service
       classpathdir="${classpathdir}"
@@ -82,7 +82,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-service>
     <gen-entitytest
       classpathdir="${classpathdir}"
@@ -94,7 +94,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-entitytest>
     <gen-servicetest
       classpathdir="${classpathdir}"
@@ -105,7 +105,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-servicetest>
     <gen-sqlfiletest
       classpathdir="${classpathdir}"
@@ -120,7 +120,7 @@
         <sqlfileset dir="${classpathdir}">
           <include name="${sqlfilepattern}" />
         </sqlfileset>
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-sqlfiletest>
     <!-- セキュリティの設定によっては以下の refresh タスクに時間がかかる場合があります．
       その場合は refresh タスクを削除してください．-->
@@ -135,7 +135,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-ddl>
     <gen-names
       classpathdir="${classpathdir}"
@@ -146,7 +146,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-names>
     <gen-sqlfileconstants
       classpathDir="${classpathdir}"
@@ -159,7 +159,7 @@
         <sqlfileset dir="${classpathdir}">
           <include name="${sqlfilepattern}" />
         </sqlfileset>
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-sqlfileconstants>
     <gen-service
       classpathdir="${classpathdir}"
@@ -170,7 +170,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-service>
     <gen-entitytest
       classpathdir="${classpathdir}"
@@ -182,7 +182,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-entitytest>
     <gen-servicetest
       classpathdir="${classpathdir}"
@@ -193,7 +193,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-servicetest>
     <gen-sqlfiletest
       classpathdir="${classpathdir}"
@@ -208,7 +208,7 @@
         <sqlfileset dir="${classpathdir}">
           <include name="${sqlfilepattern}" />
         </sqlfileset>
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </gen-sqlfiletest>
     <!-- セキュリティの設定によっては以下の refresh タスクに時間がかかる場合があります．
       その場合は refresh タスクを削除してください．-->
@@ -225,7 +225,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </migrate>
     <!-- セキュリティの設定によっては以下の refresh タスクに時間がかかる場合があります．
       その場合は refresh タスクを削除してください．-->
@@ -242,7 +242,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </migrate>
     <!-- セキュリティの設定によっては以下の refresh タスクに時間がかかる場合があります．
       その場合は refresh タスクを削除してください．-->
@@ -258,7 +258,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath">
-        <jvmarg value="${vmarg.encoding}"/>
+        
     </dump-data>
     <!-- セキュリティの設定によっては以下の refresh タスクに時間がかかる場合があります．
       その場合は refresh タスクを削除してください．-->
