@@ -34,7 +34,7 @@
 		<input type = "submit" 
 			   name = "btn"
 			   value = "過去半年の結果リスト"
-			   formaction = "<%= request.getContextPath() %> /HalfAction"
+			   formaction = "<%= request.getContextPath() %> /HalfAction" 
 			   formmethod = "POST" />
 		<input type = "submit"
 			   name = "btn"
