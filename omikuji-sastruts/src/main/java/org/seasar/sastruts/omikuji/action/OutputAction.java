@@ -18,7 +18,6 @@ import java.util.Random;
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.seasar.sastruts.omikuji.classes.Cyuukichi;
 import org.seasar.sastruts.omikuji.classes.DBUtil;
@@ -43,15 +42,12 @@ public class OutputAction {
 	protected HttpServletRequest request;
 	
 	@Resource
-	protected HttpSession session = request.getSession();
-	
-	@Resource
 	private static final String path = "/omikuji-sastruts/csvomkj.csv";
 	
 	@Execute(validator = false)
 	public String output() throws ServletException, IOException, ParseException{
 		
-		String birthday = (String) session.getAttribute("birthday");
+		String birthday = (String) request.getAttribute("birthday");
 		
 		DateFormat df = new SimpleDateFormat("yyyyMMdd");
 		Calendar today = Calendar.getInstance();

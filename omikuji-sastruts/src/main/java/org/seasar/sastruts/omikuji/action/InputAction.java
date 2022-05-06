@@ -18,7 +18,7 @@ public class InputAction {
 	
 	@Execute(validator = false)
 	public String index() {
-		return "index.jsp";
+		return "input.jsp";
 	}
 	
 }
