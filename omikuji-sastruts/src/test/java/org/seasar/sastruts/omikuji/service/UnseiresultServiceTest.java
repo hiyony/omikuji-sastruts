@@ -1,6 +1,7 @@
 package org.seasar.sastruts.omikuji.service;
 
 import javax.annotation.Generated;
+
 import org.seasar.extension.unit.S2TestCase;
 
 /**

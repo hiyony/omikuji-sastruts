@@ -64,7 +64,7 @@ public class OutputAction {
             PreparedStatement pstmt1 = conn.prepareStatement(fortunemaster_selectsql);
             ResultSet rs1 = pstmt1.executeQuery();
             
-            Map<String, String> unseiMap = new HashMap<>();
+            Map<String, String> unseiMap = new HashMap<String, String>();
             while (rs1.next()) {
                 unseiMap.put(rs1.getString("unseiname"), rs1.getString("unseicode"));
             }
